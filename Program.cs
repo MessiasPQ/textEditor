@@ -32,7 +32,19 @@ namespace TextEditor
 
         static void Editar()
         {
+            Console.Clear();
+            Console.WriteLine("Digite o seu texto abaixo. (ESC para sair)");
+            Console.WriteLine("------------------------------------------");
+            string texto = "";
 
+            do
+            {
+                texto += Console.ReadLine();
+                texto += Environment.NewLine;
+            }
+            while (Console.ReadKey().Key != ConsoleKey.Escape);
+
+            Console.WriteLine(texto);
         }
     }
 }
